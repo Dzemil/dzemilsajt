@@ -3,11 +3,19 @@
 {% block base %}
 {% load static %}
 
-<div class="container d-flex justify-content-around align-items-center">
-    <div>
-        Ovo je moj sajt.
+<div class="content">
+
+    <div class="container d-flex justify-content-around align-items-center">
+        <h3>Ovo je moj sajt.</h3>
+        <img id="my_img" class="img-fluid" src="{% static 'homepage/img/dzemil.jpg' %}" alt="Me">
     </div>
-    <img id="my_img" class="img-fluid" src="{% static 'homepage/img/dzemil.jpg' %}" alt="Me">
+    <br/>
+
+    <div class="text-center">
+        <p>Ponajvise sluzi da se izvezbam</p>
+        <br/>
+    </div>
+
 </div>
 
 
