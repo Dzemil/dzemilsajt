@@ -1,7 +1,14 @@
 {% extends "homepage/base.html" %}
 {% block title %}Home{% endblock %}
 {% block base %}
+{% load static %}
 
-<h1>Hello</h1>
+<div class="container d-flex justify-content-around align-items-center">
+    <div>
+        Ovo je moj sajt.
+    </div>
+    <img id="my_img" class="img-fluid" src="{% static 'homepage/img/dzemil.jpg' %}" alt="Me">
+</div>
 
-{% endblock%}
+
+{% endblock %}
