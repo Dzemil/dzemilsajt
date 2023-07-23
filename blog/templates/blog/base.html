@@ -13,24 +13,8 @@
     <body>
         {% include 'homepage/navbar.html' %}
 
-        <style>
-        .shadow {
-            box-shadow: 0 4px 2px -2px rgba(0, 0, 0, 0.1);
-        }
-        .btn-danger {
-            color: #fff;
-            background-color: #f00000;
-            border-color: #dc281e;
-        }
-    </style>
-
-
         {% block content %}
         <!-- Content Goes here -->
         {% endblock content %}
-        <!-- Footer -->
-        <footer class="py-3 bg-grey">
-            <p class="m-0 text-dark text-center ">Copyright &copy; Django Central</p>
-        </footer>
     </body>
 </html>
