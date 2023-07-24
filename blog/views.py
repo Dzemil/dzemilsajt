@@ -1,5 +1,6 @@
 from django.views import generic
 from .models import Post
+from .forms import PostForm
 
 class PostList(generic.ListView):
     queryset = Post.objects.filter(status=1).order_by('-created_on')
@@ -11,5 +12,10 @@ class PostDetail(generic.DetailView):
 
 class PostNew(generic.CreateView):
     model = Post
+    form_class = PostForm
     template_name = 'blog/add_post.html'
-    fields = '__all__'
+
+class PostUpdate(generic.UpdateView):
+    model = Post
+    form_class = PostForm
+    template_name = "blog/update_post.html"
