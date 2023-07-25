@@ -7,8 +7,8 @@
     <div class="card-body">
       <h1>{% block title %} {{ post.title }} {% endblock title %}</h1>
       <p class=" text-muted">{{ post.author }} | {{ post.created_on }} - <small><a
-            href="{% url 'update_post' post.slug %}">(Azuriraj)</a class="delete"></small> - 
-        <small><a href="{% url 'delete_post' post.slug %}">(Izbrisi)</a></small>
+            href="{% url 'update_post' post.slug %}">(Azuriraj)</a></small> - 
+        <small><a class="delete" href="{% url 'delete_post' post.slug %}">(Izbrisi)</a></small>
       </p>
       <p class="card-text ">{{ post.content | safe }}</p>
     </div>
