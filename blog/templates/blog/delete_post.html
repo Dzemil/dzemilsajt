@@ -1,0 +1,15 @@
+{% extends 'blog/base.html' %}
+
+{% block content %}
+
+<h1>Izbrisi clanak</h1>
+<br/>
+<h3>Izbrisi: {{ post.title }}</h3>
+<div class="form-group">
+    <form method="POST">
+        {% csrf_token %}
+        <button class="btn btn-danger">Izbrisi</button>
+    </form>
+</div>
+
+{% endblock content %}

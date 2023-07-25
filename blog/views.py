@@ -1,3 +1,4 @@
+from django.urls import reverse_lazy
 from django.views import generic
 from .models import Post
 from .forms import PostForm
@@ -18,4 +19,9 @@ class PostNew(generic.CreateView):
 class PostUpdate(generic.UpdateView):
     model = Post
     form_class = PostForm
-    template_name = "blog/update_post.html"
+    template_name = 'blog/update_post.html'
+
+class PostDelete(generic.DeleteView):
+    model = Post
+    template_name = 'blog/delete_post.html'
+    success_url = reverse_lazy('blog')
