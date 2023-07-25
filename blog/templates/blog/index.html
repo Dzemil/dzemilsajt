@@ -3,15 +3,16 @@
 {% block content %}
 
 <h1>Posts</h1>
+<div class="content">
+    <ul>
+        {% for post in post_list %}
 
-<ul>
-    {% for post in post_list %}
-
-    <li><a href="{% url 'post_detail' post.slug %}">{{ post.title }}</a> - {{ post.author }} - <small><a
-                href="{% url 'update_post' post.slug %}">(Azuriraj)</a></small> - <small><a class="delete"
+        <li><a href="{% url 'post_detail' post.slug %}">{{ post.title }}</a> - {{ post.author }} - <small><a
+                    href="{% url 'update_post' post.slug %}">(Azuriraj)</a></small> - <small><a class="delete"
                     href="{% url 'delete_post' post.slug %}">(Izbrisi)</a></small><br />
-        {{ post.content }}</li>
+            {{ post.content }}</li>
 
-    {% endfor %}
-</ul>
+        {% endfor %}
+    </ul>
+</div>
 {%endblock%}
