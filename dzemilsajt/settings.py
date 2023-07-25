@@ -35,6 +35,7 @@ ALLOWED_HOSTS = ['*']
 INSTALLED_APPS = [
     'blog',
     'homepage',
+    'members',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
@@ -122,6 +123,9 @@ USE_TZ = True
 STATIC_URL = 'static/'
 STATIC_URL = 'blog/static'
 STATIC_URL = 'homepage/static/'
+
+LOGIN_REDIRECT_URL = 'blog'
+LOGOUT_REDIRECT_URL = 'blog'
 
 
 # Default primary key field type
