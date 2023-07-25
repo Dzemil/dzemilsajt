@@ -2,14 +2,21 @@
 
 {% block content %}
 
-<h1>Izbrisi clanak</h1>
-<br/>
-<h3>Izbrisi: {{ post.title }}</h3>
-<div class="form-group">
-    <form method="POST">
-        {% csrf_token %}
-        <button class="btn btn-danger">Izbrisi</button>
-    </form>
-</div>
+{% if user.is_authenticated %}
+
+    <h1>Izbrisi clanak</h1>
+    <br/>
+    <h3>Izbrisi: {{ post.title }}</h3>
+    <div class="form-group">
+        <form method="POST">
+            {% csrf_token %}
+            <button class="btn btn-danger">Izbrisi</button>
+        </form>
+    </div>
+
+{% else %}
+    Niste prijavljeni/ulogovani
+
+{% endif %}
 
 {% endblock content %}
